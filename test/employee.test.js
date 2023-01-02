@@ -1,48 +1,48 @@
 const Employee = require("../lib/Employee");
 
-describe("Instantiate", () => {
+test("Instantiate", () => {
   const testEmployee = new Employee();
   expect(typeof(testEmployee)).toBe("object");
 });
 
-describe("Name", () => {
-  const name = "Chang";
+test("Name", () => {
+const name = "Chang";
   const test = new Employee(name);
-  expect(typeof(test.name)).toBe(name);
+  expect(test.name).toBe(name);
 });
 
-describe("Id", () => {
+test("Id", () => {
   const id = 1996;
   const test = new Employee("Chang", id);
-  expect(typeof(test.id)).toBe(id);
+  expect(test.id).toBe(id);
 });
 
-describe("Email", () => {
+test("Email", () => {
   const email = "test@gmail.com";
   const test = new Employee("Chang", 1, email);
-  expect(typeof(test.email)).toBe(email);
+  expect(test.email).toBe(email);
 });
 
-describe("getName Method", () => {
+test("getName Method", () => {
   const name = "Chang";
   const test = new Employee(name);
-  expect(typeof(test.getName())).toBe(name);
+  expect(test.getName()).toBe(name);
 });
 
-describe("getId Method", () => {
+test("getId Method", () => {
   const id = 1996;
-  const test = new Employee(id);
-  expect(typeof(test.getId())).toBe(id);
+  const test = new Employee("Chang", id);
+  expect(test.getId()).toBe(id);
 });
 
-describe("getEmail Method", () => {
+test("getEmail Method", () => {
   const email = "test@gmail.com";
-  const test = new Employee(email);
-  expect(typeof(test.getEmail())).toBe(email);
+  const test = new Employee("Chang", 1, email);
+  expect(test.getEmail()).toBe(email);
 });
 
-describe("getRole Method", () => {
+test("getRole Method", () => {
   const role = "Employee";
-  const test = new Employee(role);
-  expect(typeof(test.getRole())).toBe(role);
+  const test = new Employee("Chang", 1, "lee@gmail");
+  expect(test.getRole()).toBe(role);
 });
