@@ -40,7 +40,7 @@ const questions = async () => {
             {
               type: "input",
               message: "What is your office number?",
-              name: "officeNumber",
+              name: "officeNum",
             },
           ])
           const newManager = new Manager(
